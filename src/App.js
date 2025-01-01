@@ -26,7 +26,9 @@ function App() {
   ]
   return (
   <div>
-    <Item itemName={response[0].itemName}></Item>
+    <Item itemName={response[0].itemName}>
+      Hello jee mai hu apki first child item
+    </Item>
     <ItemDate day={response[0].itemDate} month={response[0].itemMonth} year={response[0].itemYear}></ItemDate>
     <Item itemName={response[1].itemName}></Item>
     <ItemDate day={response[1].itemDate} month={response[1].itemMonth} year={response[1].itemYear}></ItemDate>

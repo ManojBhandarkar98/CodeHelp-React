@@ -1,7 +1,9 @@
 import './Item.css';
 function Item(props) {
     const itemName = props.itemName;
-    return <p className="item">{itemName}</p>;
+    return (
+    <div><p className="item">{itemName}</p>
+    {props.children}</div>);
 }
 
 export default Item;
