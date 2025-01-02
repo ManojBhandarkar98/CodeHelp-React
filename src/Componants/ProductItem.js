@@ -6,14 +6,17 @@ import './ProductItem.css';
 
 const ProductItem = (props) => {
 
- 
+  const [title, setTitle] = useState(props.title)
+  function clickHandler() {
+    setTitle("PopCorn");
+  }
   return (
     <Card className='product-item'>
       <ProductDate date={props.date} />
       <div className='product-item__description'>
-        <h2>{props.title}</h2>
+        <h2>{title}</h2>
       </div>
-     
+      <button onClick={clickHandler}>Add to Cart</button>
     </Card>
   );
 }
