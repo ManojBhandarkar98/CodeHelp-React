@@ -1,5 +1,6 @@
 import React from 'react';
 import Products from './Componants/Products';
+import NewProduct from './Componants/NewProduct';
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
 
   return (
     <div>
+      <NewProduct/>
       <Products items={products} />
     </div>
   );
