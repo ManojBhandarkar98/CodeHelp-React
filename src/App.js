@@ -32,10 +32,13 @@ function App() {
     },
   ];
 
+  function printProductData(data){
+    console.log(data);
+  }
 
   return (
     <div>
-      <NewProduct/>
+      <NewProduct pranay ={printProductData}/>
       <Products items={products} />
     </div>
   );

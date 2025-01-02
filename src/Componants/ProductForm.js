@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./ProductForm.css"
-function ProductForm() {
+function ProductForm(props) {
 
     const [title, setTitle] = useState('');
     const [date, setDate] = useState('');
@@ -13,10 +13,13 @@ function ProductForm() {
 
     function submitHandler(event){
         event.preventDefault();
+        
         const productData = {
             title:title,
             date:date
         }
+
+        props.onSaveProduct(productData);
         setTitle('');
         setDate('');
     }
